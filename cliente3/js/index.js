@@ -21,9 +21,6 @@ document.getElementById("checkout-btn").addEventListener("click", function() {
     price: document.getElementById("unit-price").innerHTML,
     plano: document.getElementById("unit-price2").innerHTML
   };
-  console.log(orderData)
-  
-
 
   fetch("https://calm-woodland-38509.herokuapp.com/create_preference", {
     method: "POST",
