@@ -25,7 +25,7 @@ document.getElementById("checkout-btn").addEventListener("click", function() {
   
   debugger
 
-  fetch("http://localhost:8080/create_preference", {
+  fetch("https://calm-woodland-38509.herokuapp.com/create_preference", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",

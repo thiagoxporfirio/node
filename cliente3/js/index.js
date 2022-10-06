@@ -7,7 +7,7 @@ const mercadopago = new MercadoPago('TEST-1b1918af-3122-473f-842c-e92174d72d13',
 let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
 const usuarioid = identidadeUser.dados.UserId
 
-console.log(usuarioid)
+
 
 // Handle call to backend and generate preference.
 document.getElementById("checkout-btn").addEventListener("click", function() {
@@ -23,9 +23,9 @@ document.getElementById("checkout-btn").addEventListener("click", function() {
   };
   console.log(orderData)
   
-  debugger
 
-  fetch("http://localhost:8080/create_preference", {
+
+  fetch("https://calm-woodland-38509.herokuapp.com/create_preference", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",

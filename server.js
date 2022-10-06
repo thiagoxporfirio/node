@@ -19,9 +19,26 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("./client"));
 
-app.get("/", function (req, res) {
-  res.status(200).sendFile("index.html");
-}); 
+// app.get("/", function (req, res) {
+//   res.status(200).sendFile("index.html");
+// }); 
+
+app.use('/client', express.static('./client'), function(req, res){
+	res.status(200).sendFile("index.html");
+}) ;
+
+app.use(express.static("./cliente2"));
+
+app.use('/cliente2', express.static('./cliente2'), function(req, res){
+	res.status(200).sendFile("index.html");
+}) ;
+
+  app.use(express.static("./cliente3"));
+
+  app.use('/cliente3', express.static('./cliente3'), function(req, res){
+	res.status(200).sendFile("index.html");
+}) ;
+
 
 app.post("/create_preference", (req, res) => {
 
@@ -111,7 +128,7 @@ app.post("/create_preference", (req, res) => {
 // 	});
 // });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 8080, () => {
 	console.log("The server is now running on Port 8080");
   });
   
