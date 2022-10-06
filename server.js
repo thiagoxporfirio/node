@@ -17,7 +17,7 @@ mercadopago.configure({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
-app.use(express.static("../../client"));
+app.use(express.static("./client"));
 
 app.get("/", function (req, res) {
   res.status(200).sendFile("index.html");
@@ -69,7 +69,7 @@ app.post("/create_preference", (req, res) => {
 			
 			console.log(dadosForm)
 	
-			fetch("http://localhost:1323/user/change-permission", {
+			fetch("https://calm-woodland-38509.herokuapp.com/user/change-permission", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
