@@ -4,7 +4,7 @@ const cors = require("cors");
 const mercadopago = require("mercadopago");
 const localStorage = require("localStorage")
 const fetch = require("node-fetch")
-
+require("dotenv").config()
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
@@ -111,7 +111,7 @@ app.post("/create_preference", (req, res) => {
 // 	});
 // });
 
-app.listen(() => {
+app.listen(process.env.PORT, () => {
 	console.log("The server is now running on Port 8080");
   });
   
