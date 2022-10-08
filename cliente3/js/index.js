@@ -4,9 +4,12 @@ const mercadopago = new MercadoPago('TEST-1b1918af-3122-473f-842c-e92174d72d13',
   locale: 'pt-BR' // The most common are: 'pt-BR', 'es-AR' and 'en-US'
 });
 
-let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-const usuarioid = identidadeUser.dados.UserId
+// let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+// const usuarioid = identidadeUser.dados.UserId
 
+let urlParams = new URLSearchParams(window.location.search)
+let useridParams = urlParams.get("userID")
+console.log(useridParams)
 
 
 // Handle call to backend and generate preference.
