@@ -86,7 +86,7 @@ app.post("/create_preference", (req, res) => {
 			
 			console.log(dadosForm)
 	
-			fetch("https://calm-woodland-38509.herokuapp.com/user/change-permission", {
+			fetch("https://dry-chamber-14632.herokuapp.com/user/change-permission", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -97,7 +97,7 @@ app.post("/create_preference", (req, res) => {
 					
 					//Quando estiver tudo ok !!
 					setTimeout(() => {
-						res.redirect('http://127.0.0.1:5501/SucessoPage/index.html')
+						res.redirect('https://proj-busca-tesouro.vercel.app/SucessoPage/index.html')
 					}, 1000)
 					return response.json();
 				})
@@ -105,7 +105,7 @@ app.post("/create_preference", (req, res) => {
 					console.log(error)
 					//Quando estiver algo errado !!
 					setTimeout(() => {
-						res.redirect('http://127.0.0.1:5501/ErrorPage/error.html')
+						res.redirect('https://proj-busca-tesouro.vercel.app/ErrorPage/error.html')
 					}, 1000)
 				});
 				
@@ -113,7 +113,7 @@ app.post("/create_preference", (req, res) => {
 		if(req.query.status == 'pending'){
 			//Quando estiver pendente !!
 			setTimeout(() => {
-				res.redirect('http://127.0.0.1:5501/Pendding/pendding.html')
+				res.redirect('https://proj-busca-tesouro.vercel.app/Pendding/pendding.html')
 			}, 1000)
 		}})
 	
