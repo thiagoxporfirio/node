@@ -56,9 +56,9 @@ app.post("/create_preference", (req, res) => {
 			}
 		],
 		back_urls: {
-			"success": "http://localhost:8080/feedback",
-			"failure": "http://localhost:8080/feedback",
-			"pending": "http://localhost:8080/feedback"
+			"success": "https://calm-caverns-77349.herokuapp.com/feedback",
+			"failure": "https://calm-caverns-77349.herokuapp.com/feedback",
+			"pending": "https://calm-caverns-77349.herokuapp.com/feedback"
 		},
 		auto_return: "all",
 	};
