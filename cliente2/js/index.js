@@ -24,7 +24,7 @@ document.getElementById("checkout-btn").addEventListener("click", function() {
   };
 
 
-  fetch("https://calm-woodland-38509.herokuapp.com/create_preference", {
+  fetch("https://calm-caverns-77349.herokuapp.com/create_preference", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
