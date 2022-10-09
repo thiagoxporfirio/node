@@ -18,7 +18,7 @@ document.getElementById("checkout-btn").addEventListener("click", function() {
   $('#checkout-btn').attr("disabled", true);
   
   const orderData = {
-    userId: usuarioid,
+    userId: useridParams,
     quantity: document.getElementById("quantity").value,
     description: document.getElementById("product-description").innerHTML,
     price: document.getElementById("unit-price").innerHTML,
